@@ -12,13 +12,9 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <script src="./js/Game.js"></script>
-  <script src="./js/Form.js"></script>
-  <script src="./js/Player.js"></script>
-
-  <!-- Firebase SDK CODE ADD BELOW -->
-  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
 
   <script>
     const firebaseConfig = {
@@ -31,13 +27,15 @@
       appId: "1:645331627919:web:2be91cf776ecaae323a5fa"
     };
 
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-
 </head>
 
 <body>
-
+  <script src="./js/Game.js"></script>
+  <script src="./js/Form.js"></script>
+  <script src="./js/Player.js"></script>
   <script src="./sketch.js"></script>
 </body>
 

@@ -6,17 +6,11 @@ class Form {
     this.greeting = createElement("h2");
   }
 
-  hide() {
-    this.greeting.hide();
-    this.playButton.hide();
-    this.input.hide();
-  }
-
   setElementsPosition() {
     this.titleImg.position(120, 50);
     this.input.position(width / 2 - 110, height / 2 - 80);
     this.playButton.position(width / 2 - 90, height / 2 - 20);
-    this.greeting.position(width/ 2 - 350, height / 2 - 100);
+    this.greeting.position(width / 2 - 300, height / 2 - 100);
   }
 
   setElementsStyle() {
@@ -26,16 +20,26 @@ class Form {
     this.greeting.class("greeting");
   }
 
+  hide() {
+    this.greeting.hide();
+    this.playButton.hide();
+    this.input.hide();
+  }
+
   handleMousePressed() {
-    //arrow function in javascript
     this.playButton.mousePressed(() => {
       this.input.hide();
       this.playButton.hide();
-      var name = this.input.value();
-      var message = "Hello " + name + "! wait for the other players to join...";
+      var message = `
+      Hello ${this.input.value()}
+      </br>wait for another player to join...`;
       this.greeting.html(message);
+      playerCount += 1;
+      player.name = this.input.value();
+      player.index = playerCount;
+      player.addPlayer();
+      player.updateCount(playerCount);
     });
-    
   }
 
   display() {
@@ -43,5 +47,4 @@ class Form {
     this.setElementsStyle();
     this.handleMousePressed();
   }
-
 }
