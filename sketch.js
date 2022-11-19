@@ -1,5 +1,5 @@
 var canvas;
-var backgroundImage, bgImg, car1_img, car2_img, track;
+var backgroundImage, car1_img, car2_img, track;
 var database, gameState;
 var form, player, playerCount;
 var allPlayers, car1, car2;
@@ -10,7 +10,6 @@ function preload() {
   car1_img = loadImage("../assets/car1.png");
   car2_img = loadImage("../assets/car2.png");
   track = loadImage("../assets/track.jpg");
-
 }
 
 function setup() {
